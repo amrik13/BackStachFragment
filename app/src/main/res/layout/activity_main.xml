@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#ffbb00"
+    android:background="#fff"
     tools:context=".MainActivity">
 
 
@@ -15,21 +15,46 @@
         android:layout_height="wrap_content"
         android:text="DEMO"
         android:layout_margin="20dp"
-        android:background="#9090"
+        android:background="#991E8D1E"
         android:textColor="#fff"
         android:textSize="20dp"
         android:padding="10dp"
         android:layout_gravity="center"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
         <FrameLayout
-            android:id="@+id/layoutID"
+            android:id="@+id/layoutID1"
             android:layout_gravity="center"
-            android:layout_margin="10dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+        />
+        <FrameLayout
+            android:id="@+id/layoutID2"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
 
             />
+    </LinearLayout>
 
+        <TextView
+            android:id="@+id/mainTxtId"
+            android:text="hello"
+            android:layout_margin="30dp"
+            android:textSize="25sp"
+            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
 
 
 </LinearLayout>

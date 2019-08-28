@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_weight="1"
     android:layout_height="wrap_content"
-    android:background="#173"
+    android:background="#10BA4A"
     android:orientation="vertical"
     tools:context=".fragment1">
 
@@ -14,10 +14,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="30sp"
+        android:textSize="15sp"
         android:textColor="#fff"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:text="@string/hello_blank_fragment" />
+    <EditText
+        android:id="@+id/frag1EditTxt"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="30dp"
+        android:background="#FFFFFF"
+        android:textColor="#000000"
+        android:maxLength="12"
+        android:maxLines="1"
+        android:layout_marginRight="30dp"
+        android:layout_height="wrap_content" />
 
     <Button
         android:id="@+id/frag1BTNID"
