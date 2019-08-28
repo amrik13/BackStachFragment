@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_weight="1"
+    android:layout_height="wrap_content"
+    android:background="#173"
+    android:orientation="vertical"
+    tools:context=".fragment1">
+
+
+    <TextView
+        android:id="@+id/frag1TXTId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_margin="50dp"
+        android:text="@string/hello_blank_fragment" />
+
+    <Button
+        android:id="@+id/frag1BTNID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:text="Frag 1"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

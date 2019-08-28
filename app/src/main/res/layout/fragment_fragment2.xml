@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="#149"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:id="@+id/fragmentID2"
+    tools:context=".fragment2">
+
+    <TextView
+        android:id="@+id/frag2TXTId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="30sp"
+        android:textColor="#fff"
+        android:layout_margin="50dp"
+        android:text="@string/text_String_F2" />
+
+    <Button
+        android:id="@+id/frag2BTNID"
+        android:layout_gravity="center"
+        android:layout_margin="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Frag 2"/>
+
+</LinearLayout>
