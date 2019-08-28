@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class fragment2 extends Fragment {
 
-    private TextView tv;
+    private TextView tv,mt;
     private EditText et;
     private Button btn;
     @Override
@@ -35,6 +35,7 @@ public class fragment2 extends Fragment {
         tv = getActivity().findViewById(R.id.frag2TXTId);
         et = getActivity().findViewById(R.id.frag2EditTxt);
         btn = getActivity().findViewById(R.id.frag2BTNID);
+        mt = getActivity().findViewById(R.id.mainTxtId);
         final FragmentManager fm = getFragmentManager();
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +44,7 @@ public class fragment2 extends Fragment {
                 try {
                     fragment1 fragg = (fragment1) fm.findFragmentById(R.id.layoutID1);
                     if(fragg!=null){
+                        mt.setText(s);
                         fragg.changeData(s);
                     }else{
                         Toast.makeText(getContext(),"Fragment Is Not VIsible",Toast.LENGTH_SHORT).show();
@@ -50,7 +52,6 @@ public class fragment2 extends Fragment {
                 }catch (ClassCastException e){
                     Toast.makeText(getContext(),"Fragment Is Not VIsible",Toast.LENGTH_SHORT).show();
                 }
-
 
             }
         });

@@ -28,27 +28,32 @@ public class MainActivity extends AppCompatActivity implements Connetor {
         shiftBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
-                Fragment frag=null;
+                FragmentTransaction ft = fm.beginTransaction();
+                Fragment frag,frag1=null;
                 if(count%2!=0){
                     frag = new fragment2();
+                    frag1 = new fragment1();
+
+                    ft.add(R.id.layoutID1,frag,"abc");
+                    ft.add(R.id.layoutID2,frag1,"abc");
                     count++;
                 }else{
-                    frag = new fragment1();
+                    frag = new fragment2();
+                    frag1 = new fragment1();
+
+                    ft.add(R.id.layoutID1,frag1,"abc");
+                    ft.add(R.id.layoutID2,frag,"abc");
                     count++;
                 }
-
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.add(R.id.layoutID1,frag,"abc");
                 ft.addToBackStack(null);
                 ft.commit();
             }
         });
 
-        Fragment frag2 = new fragment2();
-        FragmentTransaction ft = fm.beginTransaction();
-        ft.add(R.id.layoutID2,frag2);
-        ft.commit();
+//        Fragment frag2 = new fragment2();
+//        FragmentTransaction ft = fm.beginTransaction();
+//        ft.add(R.id.layoutID2,frag2);
+//        ft.commit();
 
     }
 
