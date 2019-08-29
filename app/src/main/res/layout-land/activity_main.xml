@@ -3,46 +3,53 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="#fff"
-     android:layout_height="match_parent"
+    android:layout_height="match_parent"
     android:layout_width="match_parent">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
 
 
-    <Button
-        android:id="@+id/shiftingID"
-        android:layout_width="wrap_content"
+        <Button
+            android:id="@+id/shiftingID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DEMO"
+            android:layout_margin="20dp"
+            android:background="#991E8D1E"
+            android:textColor="#fff"
+            android:textSize="20dp"
+            android:padding="10dp"
+            android:layout_gravity="center"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DEMO"
-        android:layout_margin="20dp"
-        android:background="#991E8D1E"
-        android:textColor="#fff"
-        android:textSize="20dp"
-        android:padding="10dp"
-        android:layout_gravity="center"/>
-
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
 
         <FrameLayout
             android:id="@+id/layoutID1"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
 
-        />
+            />
         <FrameLayout
             android:id="@+id/layoutID2"
             android:layout_gravity="center"
             android:layout_margin="5dp"
-            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
 
             />
 
+    </LinearLayout>
         <TextView
             android:id="@+id/mainTxtId"
             android:text="hello"
@@ -54,5 +61,5 @@
             android:layout_gravity="center"/>
 
 
-</LinearLayout>
+    </LinearLayout>
 </ScrollView>
