@@ -23,23 +23,23 @@ public class fragment2 extends Fragment {
     private EditText et;
     private Button btn;
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fragment2, container, false);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
+        View v=inflater.inflate(R.layout.fragment_fragment2, container, false);
+        tv = v.findViewById(R.id.frag2TXTId);
+        et = v.findViewById(R.id.frag2EditTxt);
+        btn = v.findViewById(R.id.frag2BTNID);
+        return v;
     }
 
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        tv = getActivity().findViewById(R.id.frag2TXTId);
-        et = getActivity().findViewById(R.id.frag2EditTxt);
-        btn = getActivity().findViewById(R.id.frag2BTNID);
-        mt = getActivity().findViewById(R.id.mainTxtId);
-        final FragmentManager fm = getFragmentManager();
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                FragmentManager fm = getFragmentManager();
+                mt = getActivity().findViewById(R.id.mainTxtId);
                 String s = et.getText().toString();
                 try {
                     fragment1 fragg = (fragment1) fm.findFragmentById(R.id.layoutID1);

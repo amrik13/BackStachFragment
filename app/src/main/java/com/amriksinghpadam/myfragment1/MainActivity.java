@@ -8,9 +8,12 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity implements Connetor {
 
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements Connetor {
             public void onClick(View view) {
                 FragmentTransaction ft = fm.beginTransaction();
                 Fragment frag,frag1=null;
+
                 if(count%2!=0){
                     frag = new fragment2();
                     frag1 = new fragment1();
@@ -39,6 +43,7 @@ public class MainActivity extends AppCompatActivity implements Connetor {
                     count++;
                 }else{
                     frag = new fragment2();
+
                     frag1 = new fragment1();
 
                     ft.add(R.id.layoutID1,frag1,"abc");
